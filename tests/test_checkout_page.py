@@ -1,7 +1,7 @@
 import time
 from playwright.sync_api import sync_playwright, expect, Page
 import pytest
-from Configs.configs import TestData
+from test_configs.configs import TestData
 from locators.home_page_locators import HomePageLocators
 from pages.cart_page import CartPage
 from pages.home_page import HomePage

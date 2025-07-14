@@ -1,5 +1,5 @@
 from locators.checkout_page_locators import CheckoutPageLocators
-from Configs.configs import TestData
+from test_configs.configs import TestData
 
 
 class CheckoutPage:

@@ -4,7 +4,7 @@ import logging
 from playwright.sync_api import sync_playwright, Page
 from datetime import datetime
 import os
-from Configs.configs import TestData
+from test_configs.configs import TestData
 from locators.login_page_locators import LoginPageLocators
 
 

@@ -1,6 +1,6 @@
 from playwright.sync_api import sync_playwright, expect, Page
 import pytest
-from Configs.configs import TestData
+from test_configs.configs import TestData
 from locators.login_page_locators import LoginPageLocators
 from pages.home_page import HomePage
 from pages.login_page import LoginPage

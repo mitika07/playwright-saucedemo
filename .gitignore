@@ -143,6 +143,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+playwrightVenv/
 
 # Spyder project settings
 .spyderproject

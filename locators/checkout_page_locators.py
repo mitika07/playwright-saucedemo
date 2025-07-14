@@ -1,0 +1,15 @@
+class CheckoutPageLocators:
+    """Checkout page locators"""
+
+    FIRST_NAME = "#first-name"
+    LAST_NAME = "#last-name"
+    POSTAL_CODE = "#postal-code"
+    CANCEL_BTN = "#cancel"
+    CHECKOUT_BTN = "#continue"
+    PAGE_TITLE = ".header_secondary_container"
+    ERROR_MESSAGE = ".error-message-container"
+    SUMMARY_ELEMENTS = "div.summary_info > div[class^='summary_']"
+    FINISH_CHECKOUT = "#finish"
+    SUCCESSFUL_CHECKOUT_HEADER = ".complete-header"
+    SUCCESSFUL_CHECKOUT_TEXT = ".complete-text"
+    BACK_HOME = "#back-to-products"

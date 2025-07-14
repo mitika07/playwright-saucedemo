@@ -1,0 +1,10 @@
+class HomePageLocators:
+    """Home page locators"""
+    HOME_PAGE_LANDING_INVENTORY = ".inventory_list"
+    HOME_PAGE_TITLE = "text=Products"
+    SORTING_FILTER = ".product_sort_container"
+    DEFAULT_SORTING = ".select_container:has-text('Name (A to Z)')"
+    INVENTORY_ITEM_PROPERTY= ".inventory_item_{}"
+    INVENTORY_ITEM = ".inventory_item"
+    ADD_TO_CART_BUTTON = "text=Add to cart"
+    CART_LINK = ".shopping_cart_link"

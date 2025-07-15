@@ -31,7 +31,7 @@ logger = setup_logger()
 def page():
     """Lanches browser for each test case and quits it after test completion"""
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         yield page
         browser.close()

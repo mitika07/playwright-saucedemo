@@ -98,6 +98,6 @@ class TestCheckoutPage:
         cart_page.checkout()
         checkout_page.fill_checkout_form()
         checkout_page.continue_checkout()
-        checkout_page.go_back_home()
         checkout_page.finish_checkout_process()
+        checkout_page.go_back_home()
         assert page.url == "https://www.saucedemo.com/inventory.html"

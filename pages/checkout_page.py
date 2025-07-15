@@ -68,4 +68,4 @@ class CheckoutPage:
         return message
 
     def go_back_home(self):
-        self.finish_checkout.click()
+        self.back_home.click()

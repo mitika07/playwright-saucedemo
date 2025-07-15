@@ -32,4 +32,12 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        python -m pytest
+        python -m pytest --html=report.html
+
+    - name: Upload HTML report and screenshots
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-report
+        path: |
+          report.html
+          screenshots/

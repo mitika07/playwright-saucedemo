@@ -6,6 +6,9 @@ from datetime import datetime
 import os
 from test_configs.configs import TestData
 from locators.login_page_locators import LoginPageLocators
+import shutil
+
+_screenshots_initialized = False  # module-level flag to prevent repeated deletion
 
 
 def setup_logger():
@@ -66,3 +69,22 @@ def cleanup_cart(page: Page):
     logger.info("🚿 Cleaning cart after test")
     login(page)
     _clear_cart(page)
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+
+    if report.when == "call" and report.failed:
+        page = item.funcargs.get("page")
+        if page:
+            screenshot_dir = "screenshots"
+            screenshot_path = os.path.join(screenshot_dir, f"{item.name}.png")
+            page.screenshot(path=screenshot_path)
+
+@pytest.fixture(scope="session", autouse=True)
+def clear_and_create_screenshot_folder():
+    screenshot_dir = "screenshots"
+    if os.path.exists(screenshot_dir):
+        shutil.rmtree(screenshot_dir)
+    os.makedirs(screenshot_dir)

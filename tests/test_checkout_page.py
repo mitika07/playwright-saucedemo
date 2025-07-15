@@ -100,4 +100,5 @@ class TestCheckoutPage:
         checkout_page.continue_checkout()
         checkout_page.finish_checkout_process()
         checkout_page.go_back_home()
-        assert page.url == "https://www.saucedemo.com/inventory.html"
+        # assert page.url == "https://www.saucedemo.com/inventory.html"
+        assert False
